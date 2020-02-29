@@ -5,7 +5,8 @@ export const TodoContext = createContext();
 export const TodoProvider = props => {
   const [todoList, setTodoList] = useState([
     {
-      task: "Make a good test"
+      task: "Make a good test",
+      done: "N"
     }
   ]);
 
