@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MdDeleteForever, MdModeEdit } from "react-icons/md";
-
+/**
+ *
+ * @param {data} param0 recebe item todo
+ * @param {edit} param1 recebe função de edição
+ * @param {exclude} param2 recebe função de exclusão
+ */
 export default function Todo({ data, edit, exclude }) {
   return (
     <>

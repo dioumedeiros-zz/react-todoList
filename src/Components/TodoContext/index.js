@@ -16,6 +16,9 @@ export const TodoProvider = props => {
     }
   ]);
 
+  /**
+   * Utilizado useEffect para atualizar context com localStorage
+   */
   useEffect(() => {
     const newTodoList = localStorage.getItem("todoList");
 

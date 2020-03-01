@@ -9,6 +9,9 @@ export default function Header() {
   const [taskDone, setTaskDone] = useState("");
   const [taskNotDone, setTaskNotDone] = useState("");
 
+  /**
+   * Utilizado useEfect para carregar variáveis da todolist no context
+   */
   useEffect(() => {
     const filterDone = todoList.filter(todo => todo.done === "S");
     setTaskDone(filterDone);

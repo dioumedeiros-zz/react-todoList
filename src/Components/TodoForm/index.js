@@ -9,6 +9,9 @@ import { TodoContext } from "../TodoContext";
 
 import "./styles.css";
 
+/**
+ * Implementado schema de validação
+ */
 const schema = Yup.object().shape({
   task: Yup.string()
     .max(20, "Máximo de 20 caracteres")
@@ -23,6 +26,10 @@ export default function TodoForm({ data }) {
 
   const state = { YES: "S", NO: "N" };
 
+  /**
+   * Utilizado useEffect para controlar carregamento de dados
+   * quando for feita edição
+   */
   useEffect(() => {
     if (data) {
       const todoDetail = todoList.find(todo => todo.id === Number(data));
@@ -39,6 +46,10 @@ export default function TodoForm({ data }) {
     }
   }, [data, todoList]);
 
+  /**
+   * Método onde é feito controle de montagem de objeto novo
+   * E de edição de tarefa
+   */
   function handleSubmit() {
     let list;
     if (detail) {
@@ -59,6 +70,13 @@ export default function TodoForm({ data }) {
 
     setTodoList(newTodoList);
     localStorage.setItem("todoList", JSON.stringify(newTodoList));
+    todoSuccess();
+  }
+
+  /**
+   * Método de sucesso da inclusão/edição de tarefas com mensagem
+   */
+  function todoSuccess() {
     toast.success("Tarefa salva com sucesso");
     history.push("/");
   }

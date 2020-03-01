@@ -10,6 +10,10 @@ export default function TodoList({ filter }) {
   const [todoList, setTodoList] = useContext(TodoContext);
   const [todoFilter, setTodoFilter] = useState();
 
+  /**
+   * Utilizado useEffect para efetuar filtro de TODO através da
+   * Escolha da combo
+   */
   useEffect(() => {
     setTodoFilter(todoList);
     if (filter && filter !== "T") {
@@ -18,6 +22,9 @@ export default function TodoList({ filter }) {
     }
   }, [filter, todoList]);
 
+  /**
+   * Método de exlusão de TODO, salvando no localStorage
+   */
   function exclude(data) {
     const newList = todoList.filter(todo => todo.id !== data.id);
     setTodoList(newList);
