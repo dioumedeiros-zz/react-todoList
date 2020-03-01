@@ -1,48 +1,92 @@
+.container-form {
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.container-form header {
+  height: 6rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-form header p {
+  padding: 2.4rem 0 1rem;
+  left: 0;
+  font-size: 24pt;
+  font-weight: bold;
+  color: #455463;
+}
+
 form {
   width: 100%;
-  padding: 20px 10px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 25px;
 }
 
-.select-task {
+form .input-task {
   background: #f1f1f1;
   border: 0;
-  height: 36px;
-  padding: 0 5px;
-  color: #33b9c8;
-  margin: 0 15px 20px;
-  border: 1px solid #33b9c8;
-  border-radius: 3px;
-  z-index: 2;
-}
-
-.input-task {
-  background: #f1f1f1;
-  border: 0;
-  height: 36px;
+  height: 50px;
   padding: 0 5px;
   color: #455463;
   margin: 0 0 20px;
   border-bottom: 1px solid #455463;
   border-bottom-style: dotted;
+  font-size: 18px;
   z-index: 2;
 }
 
-.input-task:placeholder {
+form .input-task:placeholder {
   color: #455463;
 }
 
-button {
-  margin: 10px 15px 0;
-  height: 36px;
-  width: 100px;
+form span {
+  color: #ff0d45;
+  align-self: flex-start;
+  margin: 0 0 20px;
+  font-weight: bold;
+}
+
+form #done {
+  display: none;
+}
+
+form label::before {
+  content: "";
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #a2a2a2;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+form label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+input:checked + label::before {
+  background-color: #33b9c1;
+  border-radius: 50%;
+}
+
+form button {
+  margin: 35px 0;
+  height: 50px;
   background: #f1f1f1;
   font-weight: bold;
   color: #33b9c8;
   border: 1px solid #33b9c8;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 18px;
   transition: background 0.3s;
   cursor: pointer;
 }
