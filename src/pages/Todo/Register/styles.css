@@ -1,0 +1,17 @@
+.container-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.content-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 650px;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
