@@ -4,9 +4,9 @@
   border-radius: radius 3px;
 }
 
-.header {
+.grid .header {
   display: grid;
-  grid-template-columns: 50% 40% 10%;
+  grid-template-columns: 65% 25% 10%;
   height: 30px;
   padding: 5px;
   font-weight: 700;
@@ -14,10 +14,14 @@
   border-bottom-color: rgba(0, 0, 0, 0.1);
 }
 
-.items {
+.grid .items {
   display: grid;
-  grid-template-columns: 50% 40% 10%;
+  grid-template-columns: 65% 25% 5% 5%;
   grid-row-gap: 10px;
   padding: 10px;
   font-size: 16px;
+}
+
+.grid .items svg {
+  cursor: pointer;
 }
