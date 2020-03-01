@@ -75,11 +75,19 @@ form label {
 
 input:checked + label::before {
   background-color: #33b9c1;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
-form button {
+form .controls-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form .controls-form button {
   margin: 35px 0;
+  width: 45%;
   height: 50px;
   background: #f1f1f1;
   font-weight: bold;
@@ -91,7 +99,17 @@ form button {
   cursor: pointer;
 }
 
-button:hover {
+form .controls-form button.save:hover {
   background: #33b9c8aa;
+  color: #f1f1f1;
+}
+
+form .controls-form .cancel {
+  color: #f53434;
+  border: 1px solid #f53434;
+}
+
+button.cancel:hover {
+  background: #c00808aa;
   color: #f1f1f1;
 }

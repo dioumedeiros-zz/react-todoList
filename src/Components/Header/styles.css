@@ -23,3 +23,19 @@
   margin: 10px;
   font-size: 18px;
 }
+
+@media (max-width: 600px) {
+  .container-header {
+    margin-bottom: 15px;
+  }
+
+  .container-header .content-header nav p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container-header .content-header nav p {
+    font-size: 10px;
+  }
+}

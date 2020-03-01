@@ -16,6 +16,7 @@ export default function List() {
         <div className="content">
           <div className="controls">
             <select
+              data-testid="data-select"
               className="select-task"
               onChange={e => setSelection(e.target.value)}
             >
@@ -23,7 +24,7 @@ export default function List() {
               <option value="S">Tarefas concluídas</option>
               <option value="N">Tarefas não concluídas</option>
             </select>
-            <Link to="/register">
+            <Link data-testid="data-link" to="/register">
               <button>
                 <MdAdd size={25} />
                 CADASTRAR

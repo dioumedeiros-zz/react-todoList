@@ -20,9 +20,11 @@ export default function Header() {
     <div className="container-header">
       <div className="content-header">
         <nav>
-          <p>TODAS TAREFAS: {todoList.length}</p>
-          <p>TAREFAS CONCLUÍDAS: {taskDone.length}</p>
-          <p>TAREFAS NÃO CONCLUÍDAS: {taskNotDone.length}</p>
+          <p data-testid="tasks">TODAS TAREFAS: {todoList.length}</p>
+          <p data-testid="tasks-done">TAREFAS CONCLUÍDAS: {taskDone.length}</p>
+          <p data-testid="tasks-not-done">
+            TAREFAS NÃO CONCLUÍDAS: {taskNotDone.length}
+          </p>
         </nav>
       </div>
     </div>

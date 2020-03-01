@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MdDeleteForever, MdModeEdit } from "react-icons/md";
 
-// import { Container } from './styles';
-
 export default function Todo({ data, edit, exclude }) {
   return (
     <>

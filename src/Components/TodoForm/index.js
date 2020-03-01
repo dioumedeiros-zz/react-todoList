@@ -29,6 +29,12 @@ export default function TodoForm({ data }) {
       if (todoDetail) {
         setDetail(todoDetail);
         setTask(todoDetail.task);
+
+        if (todoDetail.done === "S") {
+          const check = document.querySelector("#done");
+          check.checked = true;
+          setDone(true);
+        }
       }
     }
   }, [data, todoList]);
@@ -57,13 +63,18 @@ export default function TodoForm({ data }) {
     history.push("/");
   }
 
+  function cancel() {
+    history.push("/");
+  }
+
   return (
     <div className="container-form">
       <header>
         <p>{data ? "Faça sua alteração" : "Faça seu cadastro"}</p>
       </header>
-      <Form schema={schema} onSubmit={handleSubmit}>
+      <Form data-testid="form" schema={schema} onSubmit={handleSubmit}>
         <Input
+          data-testid="input-task"
           className="input-task"
           type="text"
           name="task"
@@ -73,6 +84,7 @@ export default function TodoForm({ data }) {
         />
 
         <Input
+          data-testid="input-check"
           type="checkbox"
           id="done"
           name="done"
@@ -80,8 +92,12 @@ export default function TodoForm({ data }) {
           onChange={e => setDone(e.target.checked)}
         />
         <label htmlFor="done">Tarefa concluída</label>
-
-        <button>Salvar</button>
+        <div className="controls-form">
+          <button className="cancel" onClick={cancel}>
+            cancelar
+          </button>
+          <button className="save">Salvar</button>
+        </div>
       </Form>
     </div>
   );

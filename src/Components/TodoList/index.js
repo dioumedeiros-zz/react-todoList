@@ -27,13 +27,13 @@ export default function TodoList({ filter }) {
   }
 
   return (
-    <div className="grid">
-      <div className="header">
+    <div data-testid="data-grid" className="grid">
+      <div data-testid="data-header" className="header">
         <div>Nome</div>
         <div>Estado</div>
         <div>Ações</div>
       </div>
-      <div className="items">
+      <div data-testid="data-items" className="items">
         {todoFilter
           ? todoFilter.map(todo => (
               <Todo key={todo.id} data={todo} exclude={exclude} />

@@ -1,6 +1,6 @@
 .container {
   height: 80vh;
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
 
   display: flex;
@@ -18,6 +18,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  .content .controls {
+    flex-direction: column;
+  }
+
+  .content .controls .select-task {
+    width: 90%;
+  }
+
+  .content .controls a {
+    width: 100%;
+  }
+
+  .content .controls a button {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .content .controls .select-task {
