@@ -1,0 +1,57 @@
+.container {
+  height: 80vh;
+  width: 800px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.content .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .controls .select-task {
+  background: #f1f1f1;
+  border: 0;
+  height: 40px;
+  padding: 0 5px;
+  color: #33b9c8;
+  margin: 20px 15px;
+  border: 1px solid #33b9c8;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.content .controls a {
+  text-decoration: none;
+}
+
+.content .controls button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0 15px;
+  background: #33b9c8;
+  color: #f1f1f1;
+  border: 1px solid #33b9c8;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content .controls button:hover {
+  background: #f1f1f1aa;
+  color: #33b9c8;
+}
