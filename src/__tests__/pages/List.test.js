@@ -5,8 +5,8 @@ import { render } from "@testing-library/react";
 import { TodoContext } from "~/Components/TodoContext";
 import List from "~/pages/Todo/List";
 
-describe("TodoList component", () => {
-  it("should render component", () => {
+describe("List page", () => {
+  it("should render page", () => {
     const todoList = [jest.fn()];
     const setTodoList = jest.fn();
     const { getByTestId } = render(
