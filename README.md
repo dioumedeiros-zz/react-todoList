@@ -1,7 +1,7 @@
 <h1 align="center">React todo list</h1>
-<p align="center">Projeto <strong>todolist</strong> desenvolvido para realizar uma listagem de tarefas <a href="https://todolist-vialaser.netlify.com/" target="_blank">TodoList</a> 🚀</p>
+<p align="center">Projeto <strong>todolist</strong> desenvolvido para realizar uma listagem de tarefas <a href="https://reactvia-todolist.netlify.com/" target="_blank">TodoList</a> 🚀</p>
 <p align="center">
-  <a aria-label="Netlify Status" href="https://todolist-vialaser.netlify.com/">
+  <a aria-label="Netlify Status" href="https://reactvia-todolist.netlify.com/">
     <img src="https://api.netlify.com/api/v1/badges/b7e642f7-feac-4adc-b6d9-02f02f2a843a/deploy-status" />
   </a>
   <a aria-label="Versão do React" href="https://github.com/facebook/react/blob/master/CHANGELOG.md#16120-november-14-2019">
